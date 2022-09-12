@@ -1,46 +1,31 @@
-# Getting Started with Create React App and Redux
+# Chat Application with RTK Query
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+### Project setup
 
-## Available Scripts
+#### Server setup and Requirement Analysis
 
-In the project directory, you can run:
+#### Requirement Analysis
 
-### `npm start`
+- 1. User can register. After registering, user will be automatically logged in, we will store login info to localStorage (for login persistance) and redirected to inbox page
+- 2. User can login and after login we will save the login information in localStorage (for login persistance) and redirect user to inbox
+- 3. Load sidebar messages from conversation API and implement load more feature.
+- 4. Load specific conversation messages when use clicks on it and implement load more feature.
+- 5. ###### When user sends message,
+- a) If conversation id is present, update conversation table and also inserts into messages table.
+- b) If conversation id is missing, get conversation id using filter
+- If conversation id exists, then update that conversation and add to messages table
+- If conversation id is missing, insert that conversation and add to messages table.
+- 6. Sidebar conversation list scroll - sort by latest first and when user loads more, bring previous '10 conversation sorted by latest first' and pushed into the conversation array.
+- 7. Messages list scroll - bring '10 latest messages per request sorted by oldest first'. When user loads more, 'bring previous 10 messages sorted again by oldest first' and unshift into the array.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### Required APIs
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- 1. Register
+- 2. Login
+- 3. Get list fo users other than requesting user
+- 4. Update conversation
+- 5. Insert conversation
+- 6. Find conversation
+- 7. List conversation
+- 8. List messages by conversation id
+- 9. Send message (insert messages into messages table)
