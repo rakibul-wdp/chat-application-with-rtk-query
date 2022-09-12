@@ -50,3 +50,7 @@ devTools: process.env.NODE_ENV !== 'production',
 - In auth api create two endpoint like register and login and also in authSlice create two reducer like userLogIn and userLogOut.
 - After register and login add some redux work, actually it work under the hood.
 - In redux code we save token in our web browser localStorage for our user authentication purpose.
+
+### Registration Feature
+
+#### Implement Registration feature
