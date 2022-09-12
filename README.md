@@ -33,3 +33,12 @@
 ### Create API Slice
 
 #### Configure the store - Code Splitting
+
+- Create common apiSlice and it takes all extra api.
+- For big project you need to create extra place to put features wise api and slice.
+- You can easily use it by this keyword like injectEndpoints and it's help our code maintainable.
+- If we don't want to show redux devtools in production level then we can use it in store section
+
+```
+devTools: process.env.NODE_ENV !== 'production',
+```
