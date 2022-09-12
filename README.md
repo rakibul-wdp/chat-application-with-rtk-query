@@ -54,3 +54,7 @@ devTools: process.env.NODE_ENV !== 'production',
 ### Registration Feature
 
 #### Implement Registration feature
+
+- Added functionality in register form. All localState manage with useState like name, email, password, etc.
+- By use hook loaded data form apiSlice like register, data, etc.
+- By useEffect get data and with handleSubmit pass data to register.
