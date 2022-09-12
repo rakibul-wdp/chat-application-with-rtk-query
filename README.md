@@ -29,3 +29,7 @@
 - 7. List conversation
 - 8. List messages by conversation id
 - 9. Send message (insert messages into messages table)
+
+### Create API Slice
+
+#### Configure the store - Code Splitting
