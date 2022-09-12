@@ -42,3 +42,7 @@
 ```
 devTools: process.env.NODE_ENV !== 'production',
 ```
+
+### Auth API and Slice
+
+#### Creating API and Slice for Authentication
